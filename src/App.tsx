@@ -1,13 +1,15 @@
-import Home from "./pages/home/Home";
+
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Users from "./pages/users/Users";
 // import Products from "./pages/products/Products";
-// import Navbar from "./components/navbar/Navbar";
-// import Footer from "./components/footer/Footer";
-// import Menu from "./components/menu/Menu";
-// import Login from "./pages/login/Login";
+import Navbar from "./components/navbar/Navbar";
+
+import Menu from "./components/menu/Menu";
+import Login from "./pages/login/Login";
 import "./styles/global.scss";
 import Products from "./pages/products/Products";
+import Footer from "./components/footer/Footer";
+import Home from "./pages/home/Home";
 // import User from "./pages/user/User";
 // import Product from "./pages/product/Product";
 // import {
@@ -22,10 +24,10 @@ function App() {
   const Layout = () => {
     return (
       <div className="main">
-        {/* <Navbar /> */}
+        <Navbar />
         <div className="container">
           <div className="menuContainer">
-            {/* <Menu /> */}
+            <Menu />
           </div>
           <div className="contentContainer">
             {/* <QueryClientProvider client={queryClient}> */}
@@ -33,7 +35,7 @@ function App() {
             {/* </QueryClientProvider> */}
           </div>
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   };
@@ -65,10 +67,10 @@ function App() {
         // },
       ],
     },
-    // {
-    //   path: "/login",
-    //   element: <Login />,
-    // },
+    {
+      path: "/login",
+      element: <Login />,
+    },
   ]);
 
   return <RouterProvider router={router} />;
