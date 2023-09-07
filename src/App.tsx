@@ -10,7 +10,9 @@ import "./styles/global.scss";
 import Products from "./pages/products/Products";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
-// import User from "./pages/user/User";
+import User from "./pages/user/User";
+import Product from "./pages/product/product";
+// import Product from "./pages/product/Product";
 // import Product from "./pages/product/Product";
 // import {
 //   QueryClient,
@@ -57,14 +59,14 @@ function App() {
           path: "/products",
           element: <Products />,
         },
-        // {
-        //   path: "/users/:id",
-        //   element: <User />,
-        // },
-        // {
-        //   path: "/products/:id",
-        //   element: <Product />,
-        // },
+        {
+          path: "/users/:id",
+          element: <User />,
+        },
+        {
+          path: "/products/:id",
+          element: <Product />,
+        },
       ],
     },
     {
