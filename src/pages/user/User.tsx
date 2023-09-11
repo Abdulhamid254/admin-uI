@@ -1,8 +1,15 @@
-import React from 'react'
+import Single from "../../components/single/Single"
+import { singleUser } from "../../utils/data";
+import "./user.scss"
 
 const User = () => {
+
+  //Fetch data and send to Single Component
+  
   return (
-    <div>User</div>
+    <div className="user">
+      <Single {...singleUser}/>
+    </div>
   )
 }
 
